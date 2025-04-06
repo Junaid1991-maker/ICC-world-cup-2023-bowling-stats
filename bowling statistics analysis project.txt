@@ -1,0 +1,64 @@
+# Cricket Bowling Performance Analysis 🏏📊
+
+A data analysis project exploring bowling metrics from the 2023 ICC Cricket World Cup  to identify key performance trends, elite bowlers, and team strategies.
+
+## Features
+
+- **Performance Metrics**: Wickets, Average, Economy, Strike Rate
+- **Advanced Analytics**: Clustering, PCA, Predictive Modeling
+- **Visualizations**: Interactive dashboards, radar charts, correlation matrices
+- **Team/Country Comparisons**: Pace vs. spin effectiveness by nation
+
+## Key Findings
+
+1. **Elite Bowlers**: 
+   - Mohammed Shami (IND): 24 wickets @ 10.7 avg
+   - Jasprit Bumrah (IND): 4.06 economy @ 18.65 avg
+2. **Team Dominance**: 
+   - India & South Africa had most wickets (100+) and best averages (<25)
+3. **Pace > Spin**: 
+   - Pacers had lower strike rates (25 vs 35) and more 5-wicket hauls
+
+## Files Structure
+
+bowling-analysis/
+├── data/
+│ └── Bowling_Stats.csv # Raw dataset
+├── notebooks/
+│ ├── 1_EDA.ipynb # Exploratory Analysis
+│ ├── 2_Clustering.ipynb # K-means/DBSCAN
+│ └── 3_Predictive.ipynb # Random Forest models
+├── reports/
+│ └── findings.pdf # Key insights summary
+└── README.md
+
+
+## Tech Stack
+
+- Python 3.9+
+- Libraries: Pandas, Scikit-learn, Plotly, Seaborn
+- Jupyter Notebook
+
+## How to Run
+
+1. Clone repo:
+   ```bash
+   git clone https://github.com/yourusername/bowling-analysis.git
+
+Install dependencies:
+pip install -r requirements.txt
+
+Run Jupyter notebooks:
+jupyter notebook
+
+Sample Code
+# Top 5 bowlers by wickets
+top_5 = df.sort_values('Wkts', ascending=False).head(5)
+print(top_5[['Bowlers', 'Country', 'Wkts', 'Average']])
+
+Future Work
+Add batting/fielding data for all-round analysis
+
+Web scraper to auto-update stats
+
+Deploy interactive dashboard (Streamlit)
